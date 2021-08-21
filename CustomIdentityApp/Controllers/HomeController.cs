@@ -12,7 +12,7 @@ namespace CustomIdentityApp.Controllers
 {
 
 
-    //[Authorize(Roles = "admin")]
+    [Authorize(Roles = "admin")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
