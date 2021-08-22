@@ -33,10 +33,12 @@ namespace CustomIdentityApp.Controllers
             return View();
         }
 
-        public IActionResult Profile()
-        {
-            return View();
-        }
+        public IActionResult Profile() => View(_userManager.Users.ToList());
+
+        //public IActionResult Profile()
+        //{
+        //    return View();
+        //}
         //public IActionResult Register()
         //{
         //    return View();

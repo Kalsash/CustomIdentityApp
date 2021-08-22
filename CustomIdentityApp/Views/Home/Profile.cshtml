@@ -1,4 +1,19 @@
-﻿
-@{
-    <p>@User.Identity.Name</p>
+﻿@model IEnumerable<CustomIdentityApp.Models.User>
+
+
+@foreach (User user in Model)
+{
+    if (user.Email == User.Identity.Name)
+    {
+        <p>Ваш логин: @User.Identity.Name</p>
+        <p>Ваш год рождения: @user.Year</p>
+    }
+
+
 }
+
+
+<form method="post" asp-controller="Account" asp-action="Logout">
+    <input type="submit" value="Выход" />
+</form>
+
