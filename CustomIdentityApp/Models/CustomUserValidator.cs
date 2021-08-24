@@ -39,16 +39,16 @@ namespace CustomIdentityApp.Models
                 list.Add(row[0].ToString());
                 //row[2].ToString(); //- к отдельной ячейке в указанной строке
             }
-            foreach (var names in list)
-            {
-                if (user.UserName.Contains(names))
-                {
-                    errors.Add(new IdentityError
-                    {
-                        Description = "Этот Email уже используется! Введите какой-нибудь другой."
-                    });
-                }
-            }
+            //foreach (var names in list)
+            //{
+            //    if (user.UserName.Contains(names))
+            //    {
+            //        errors.Add(new IdentityError
+            //        {
+            //            Description = "Этот Email уже используется! Введите какой-нибудь другой."
+            //        });
+            //    }
+            //}
 
             return Task.FromResult(errors.Count == 0 ?
                 IdentityResult.Success : IdentityResult.Failed(errors.ToArray()));
