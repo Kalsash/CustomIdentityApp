@@ -26,7 +26,7 @@
                         {
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Profile">Профиль</a>
 
-                            @if (User.Identity.Name == "admin@gmail.com" || User.Identity.Name == "kalsash")
+                            @if (User.IsInRole("admin"))
                             {
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Users</a>
@@ -34,6 +34,15 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Roles</a>
                                 </li>
+                            }
+                            else
+                            { 
+                            @if (User.IsInRole("moderator"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Users</a>
+                                </li>
+                            }
                             }
 
                         }
