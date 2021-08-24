@@ -37,7 +37,7 @@ namespace CustomIdentityApp
 
             services.AddControllersWithViews();
 
-            //// Добавляем сервис валидатора пароля
+            // Добавляем сервис валидатора пароля
             //services.AddTransient<IPasswordValidator<User>,
             //        CustomPasswordValidator>(serv => new CustomPasswordValidator(6));
 
