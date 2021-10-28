@@ -34,8 +34,7 @@ namespace CustomIdentityApp.Controllers
         {
             return View();
         }
-
-        //[HttpPost]
+        [HttpPost]
         //[ValidateInput(false)]
         //public ActionResult Index(string content1)
         //{
