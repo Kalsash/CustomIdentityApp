@@ -34,6 +34,13 @@ namespace CustomIdentityApp.Controllers
         {
             return View();
         }
+        [HttpPost]
+        //[ValidateInput(false)]
+        //public ActionResult Index(string content1)
+        //{
+        //    ViewBag.Content1 = content1;
+        //    return View();
+        //}
 
         public IActionResult Profile() => View(_userManager.Users.ToList());
      
