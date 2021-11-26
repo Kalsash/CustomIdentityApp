@@ -43,7 +43,7 @@ namespace CustomIdentityApp.Controllers
         }
 
 
-        //////////// Registration ///////////////////
+    
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -51,8 +51,8 @@ namespace CustomIdentityApp.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        //////////// Registration ///////////////////
 
-        
         [HttpGet]
         public IActionResult Register()
         {

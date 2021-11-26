@@ -18,6 +18,11 @@ namespace CustomIdentityApp
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationContext>(options => options.UseSqlServer(
+       "Data Source=(local); Database=Articles; Persist Security Info=False; MultipleActiveResultSets=True; Trusted_Connection=True;"));
+
+            services.AddTransient<ViewModels.ArticlesRepository>(); // Articles(posting news)
+
             services.AddTransient<IUserValidator<User>, CustomUserValidator>();
 
             services.AddDbContext<ApplicationContext>(options =>
