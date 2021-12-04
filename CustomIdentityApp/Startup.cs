@@ -9,6 +9,7 @@ namespace CustomIdentityApp
 {
     public class Startup
     {
+        //Statrup
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
